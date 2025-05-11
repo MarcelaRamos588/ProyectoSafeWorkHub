@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Accidente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("images/7021629.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 123, 255, 0.92);
+            color: white;
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #28d17c;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #22b86a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Accidente</h2>
+    <form action="AccidenteServlet" method="post">
+        <label for="idAccidente">ID del Accidente</label>
+        <input type="text" id="idAccidente" name="idAccidente" required>
+
+        <label for="fecha">Fecha del Accidente</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="lugar">Lugar</label>
+        <input type="text" id="lugar" name="lugar" placeholder="Ej: Bodega principal" required>
+
+        <label for="descripcion">Descripción del Accidente</label>
+        <textarea id="descripcion" name="descripcion" rows="2" placeholder="Ej: Resbalón en superficie mojada" required></textarea>
+
+        <label for="detalleLesion">Detalles de la Lesión</label>
+        <textarea id="detalleLesion" name="detalleLesion" rows="2" placeholder="Ej: Esguince de tobillo" required></textarea>
+
+        <label for="tratamiento">Tratamiento Aplicado</label>
+        <textarea id="tratamiento" name="tratamiento" rows="2" placeholder="Ej: Reposo por 5 días" required></textarea>
+
+        <label for="idEmpleado">ID del Empleado Involucrado</label>
+        <input type="text" id="idEmpleado" name="idEmpleado" required>
+
+        <input type="submit" value="Registrar Accidente">
+    </form>
+</div>
+
+</body>
+</html>

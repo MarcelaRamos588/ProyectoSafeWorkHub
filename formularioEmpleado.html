@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Empleado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("images/7021629.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 123, 255, 0.92);
+            color: white;
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #28d17c;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #22b86a;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registro de Empleado</h2>
+        <form action="EmpleadoServlet" method="post">
+            <input type="text" name="documento" placeholder="Documento (ID)" required>
+            <input type="text" name="nombre" placeholder="Nombres" required>
+            <input type="text" name="cargo" placeholder="Cargo" required>
+
+            <select name="estadoCapacitacion" required>
+                <option value="">Seleccione estado de capacitación</option>
+                <option value="Capacitado">Capacitado</option>
+                <option value="En proceso">En proceso</option>
+                <option value="Sin capacitación">Sin capacitación</option>
+            </select>
+
+            <input type="submit" value="Registrar">
+        </form>
+
+        <div class="footer">
+            Seguridad y Salud en el Trabajo — CDA Automotos
+        </div>
+    </div>
+
+</body>
+</html>

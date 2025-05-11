@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Capacitación</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("images/7021629.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 123, 255, 0.92);
+            color: white;
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #28d17c;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #22b86a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Capacitación</h2>
+    <form action="CapacitacionServlet" method="post">
+        <label for="idCapacitacion">ID de Capacitación</label>
+        <input type="text" id="idCapacitacion" name="idCapacitacion" required>
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="tema">Tema</label>
+        <textarea id="tema" name="tema" rows="2" required></textarea>
+
+        <label for="idEmpleado">ID del Empleado</label>
+        <input type="text" id="idEmpleado" name="idEmpleado" required>
+
+        <input type="submit" value="Registrar Capacitación">
+    </form>
+</div>
+
+</body>
+</html>

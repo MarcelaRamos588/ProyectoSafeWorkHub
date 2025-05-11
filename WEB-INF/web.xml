@@ -1,0 +1,22 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <servlet>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <servlet-class>EmpleadoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <url-pattern>/EmpleadoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>AccidenteServlet</servlet-name>
+    <servlet-class>AccidenteServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AccidenteServlet</servlet-name>
+    <url-pattern>/AccidenteServlet</url-pattern>
+</servlet-mapping>
+
+</web-app>
